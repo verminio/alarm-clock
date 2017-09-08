@@ -26,5 +26,10 @@ namespace AlarmClock
         {
             this.InitializeComponent();
         }
+
+        private void ClickMe_Click(object sender, RoutedEventArgs e)
+        {
+            this.HelloMessage.Text = "Hello, Windows 10 IoT Core!";
+        }
     }
 }
