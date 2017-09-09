@@ -7,12 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBox x:Name="HelloMessage" Text="Hello, World!" Margin="10" IsReadOnly="True"/>
-                <Button x:Name="ClickMe" Content="Click Me!"  Margin="10" HorizontalAlignment="Center" Click="ClickMe_Click"/>
-            </StackPanel>
-        </Grid>
+    <Grid Background="#FF191919">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Name="TxtTime" FontSize="96" Foreground="#FDFDFD" HorizontalAlignment="Center"/>
+            <TextBlock Name="TxtDate" FontSize="24" Foreground="#FDFDFD" HorizontalAlignment="Center" />
+        </StackPanel>
     </Grid>
 </Page>

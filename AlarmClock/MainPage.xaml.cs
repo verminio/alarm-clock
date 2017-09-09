@@ -22,14 +22,25 @@ namespace AlarmClock
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
+        private const string timeFormat = "HH:mm:ss";
+
+        private DispatcherTimer timer;
+
         public MainPage()
         {
             this.InitializeComponent();
+            this.timer = new DispatcherTimer();
+            this.timer.Interval = TimeSpan.FromSeconds(1);
+            this.timer.Tick += timer_Tick;
+            this.timer.Start();
         }
 
-        private void ClickMe_Click(object sender, RoutedEventArgs e)
+        private void timer_Tick(object sender, object e)
         {
-            this.HelloMessage.Text = "Hello, Windows 10 IoT Core!";
+            DateTime now = DateTime.Now;
+            this.TxtTime.Text = now.ToString(timeFormat);
+            this.TxtDate.Text = now.ToString("D");
         }
     }
 }
